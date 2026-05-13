@@ -1,15 +1,240 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Propos</title>
-    <link rel="stylesheet" href="C:\Users\DELL\Desktop\cours_html\bootstrap\bootstrap-5.3.8-dist\css\bootstrap.css">
-    <link rel="stylesheet" href="C:\Users\DELL\Desktop\cours_html\MASSALY-Seynabou-AfriTalent\css\style.css">
-</head>
-<body>
-    
-    <script src="C:\Users\DELL\Desktop\cours_html\bootstrap\bootstrap-5.3.8-dist\js\bootstrap.js"></script>
-    <script src="C:\Users\DELL\Desktop\cours_html\MASSALY-Seynabou-AfriTalent\js\main.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AfriTalent</title>
+<link rel="stylesheet" href="css/style.css" type="text/css">
+  <!-- Bootstrap -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Bootstrap Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+  />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top">
+  <div class="container">
+
+    <a class="navbar-brand" ><img src="images/imagelogo.jpeg" width="70PX" href="#">AfriTalent</a>
+
+    <!--button mobile-->
+      <button class="navbar-toggler "
+       type="button"
+        data bs-toggle="collapse"
+         data-bs-target="#navbarnav"
+         >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="nav">
+
+      <ul class="navbar-nav mx-auto">
+
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Accueil</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="freelances.html">Freelances</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="tarifs.html">Tarifs</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">À propos</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+
+      </ul>
+    <!--bouton-->
+        <a href="#" class="btn btn-primary ms-3">Rejoindre AfriTalent</a>
+      </div>
+  </div>
+</nav>
+
+
+
+    <div class="logo">REINIT.</div>
+    <nav>
+        <a href="#">Acceuil</a>
+        <a href="#">Nos valeurs</a>
+        <a href="#">L'equipe</a>
+        <a href="#">Contact</a>
+    </nav>
+    <button class="btn">Nous rejoindre</button>
+
+
+    <!--HISTOIRE-->
+    <section class="hero d-flex align-items-center text-center">
+        <div claa="container">
+            <div class="row align-items-center">
+                <!--texte-->
+                <div class="col-lg-6">
+                    <h1 class="hero title">NOTRE HISTOIRE</h1>
+                    <p class="hero-subtile">TOUT A COMMENCER AVEC SEYNABOU,une jeune passonnee de technologies et
+                        entrepreneuriat.
+                        Constatant que de nombreux jeunes talentueux restaient dans l'ombre elle a decide de creer une
+                        Plateforme.
+                        Pour les mettre en avant avec peu de moyen et bcp de determination Travaillant jour et nuit pour
+                        donner vie .
+                        A ce nouveau projet tres vite,AfriTalent a attiree l'attention et a commence a grandir.
+                    </p>
+                    <div class="mt-4">
+                    </div>
+                </div>
+                <!--image-->
+                <div class="col-lg-6 text-center">
+                    <img src="images/imagehisto.jpeg" alt="Freelances" class="img-fluid hero-img" width="400" 
+                        height="60pxs">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--EQUIPE-->
+    <section class="team">
+        <h4>L'EQUIPE</h4>
+        <p>Des talents engages a vos cotes.</p>
+
+        <div class="cards row">
+
+            <div class="col-md-4 col-12 col-lg-3 mb-3">
+                <div class="card p-1 text-center">
+                    <img class="card-img-top" src="images/imagesoda.jpeg" width="400" height="300pxs">
+                    <h3>Adja Soda ciss</h3>
+                    <span>Commercante</span>
+                    <p>Le commerce,ma passion,le client,ma priorite</p>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-twitter"></i>
+                    <i class="bi bi-linkedin"></i>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-12 col-lg-3 mb-3">
+                <div class="card p-1 text-center">
+                    <img class="card-img-top" src="images/imagemodou.jpeg" width="400" height="300pxs">
+                    <h3>Modou Lamine Niass</h3>
+                    <span>Homme d'affaire</span>
+                    <p>L'ambition guide mes pas,le succes est ma destination</p>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-twitter"></i>
+                    <i class="bi bi-linkedin"></i>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-12 col-lg-3 mb-3">
+                <div class="card p-1 text-center">
+                    <img class="card-img-top" src="images/imagematy.jpeg" width="400" height="300pxs">
+                    <h3>Maty Diagne</h3>
+                    <span>Transitere</span>
+                    <p>En mouvement,vers de nouveaux horizons</p>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-twitter"></i>
+                    <i class="bi bi-linkedin"></i>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-12 col-lg-3 mb-3">
+                <div class="card p-1 text-center">
+                    <img class="card-img-top" src="images/imagemoussa.jpeg" width="400" height="300pxs">
+                    <h3>Moussa Cisse</h3>
+                    <span>Expert Comptable</span>
+                    <p>La rigueur au service de votre reussite financiere</p>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-twitter"></i>
+                    <i class="bi bi-linkedin"></i>
+                </div>
+            </div>
+         </div>
+</section>
+
+    <!--VALEURS-->
+    <section class="values">
+        <h4>NOS VALEURS</h4>
+        <p>Ce qui nous anime au quotidien.</p>
+
+        <div class="value-box row">
+
+            <div class="col-lg-4 col-md-6 col-12">
+                <h3>Innovation</h3>
+                <p>Nous explorons les meilleurs technologies.</p>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12">
+                <h3>Accessibilite</h3>
+                <p>Des solutions pour nous.</p>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12">
+                <h3>Communaute</h3>
+                <p>Nous collaborons et partageons.</p>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12">
+                <h3>Excellence</h3>
+                <p>Qualites dans chaque detail.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!--CHIFFRES-->
+    <section class="stats">
+        <h4>CHIFFRES CLES</h4>
+        <p>REINIT.en quelques chiffres.</p>
+
+        <div class="stat-box">
+            <div class="stat">
+                <h1>0+</h1>
+                <p>Projets realises</p>
+            </div>
+            <div class="stat">
+                <h1>0+</h1>
+                <p>Clients satisfaits</p>
+            </div>
+            <div class="stat">
+                <h1>0+</h1>
+                <p>Lignes de code</p>
+            </div>
+            <div class="stat">
+                <h1>0</h1>
+                <p>Annees d'experience</p>
+            </div>
+
+        </div>
+    </section>
+     
+    <!-- FOOTER -->
+
+ 
+        <!--ligne copyright-->
+       <div class="text-center mt-4 border-top pt-3"></div>
+        <div class="copyright text-center">
+        © 2026 AfriTalent. Tous droits réservés.
+      </div>
+    </div>
+    <!-- Bootstrap JS -->
+     <script src="=https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
