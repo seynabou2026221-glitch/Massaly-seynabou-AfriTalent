@@ -1,16 +1,516 @@
-*{
-    margin: 100;
-    padding: 0;
-    list-style: none;
-    box-sizing: border-box;  
+/*lien*/
+.nav-link{
+    margin-left: 15px;
+    color: #333;
+    font-weight: 500;
+    transition: 0.3s;
 }
-:root{
---text:#fffff;
---primary:#ffff;
---secondary:#000;
---tertiary:#6C4FDF;
---quatery:#F0F8FF
---bg:#0f0f0f;
---card:#1a1a1a;
-line-height: 1.6;
+/*hover*/
+.nav-link:hover{
+    color: blue;
+}
+/*bouton*/
+.btn-primary{
+    border-radius: 20px;
+    padding: 6px 15px;
+}
+/*===hero====*/
+/* --- CONFIGURATION DE LA BANNER HERO --- */
+.hero-banner {
+    /* On utilise l'image en fond sur toute la largeur/hauteur */
+    background: url(imagehero.jpeg);
+    min-height: 85vh; /* Prend 85% de la hauteur de l'écran */
+    overflow: hidden;
+}
+
+/* Couche sombre par-dessus l'image pour faire ressortir le texte blanc */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg,rgb(65, 121, 224) 100%);
+    z-index: 1;
+}
+
+/* Force les éléments à se mettre au-dessus de l'overlay */
+.z-index-2 {
+    position: relative;
+    z-index: 2;
+}
+
+/* Couleur cyan personnalisée pour vos titres et chiffres */
+.text-cyan {
+    color: #06b6d4 !important;
+}
+
+/* Espacements et tailles affinées */
+.tracking-wider {
+    letter-spacing: 0.08em;
+    font-size: 0.85rem;
+}
+
+.header-title {
+    line-height: 1.15;
+}
+
+.max-width-sm {
+    max-width: 550px;
+}
+
+/* Style de la bordure des stats */
+.border-opacity-20 {
+    border-color: rgba(91, 167, 211, 0.2) !important;
+}
+
+/* Ajustement responsive pour les mobiles */
+@media (max-width: 768px) {
+    .hero-banner {
+        min-height: 100vh; /* Plein écran sur mobile */
+        padding-top: 80px;
+    }
+    .header-title {
+        font-size: 2.2rem !important;
+    }
+}
+/*comment sa marche*/
+.how-it-work{
+    padding: 60px 20px ;
+    background:rgb(94, 164, 197);
+    text-align: center;
+     font-size: 2rem;
+    margin-bottom: 40px;
+}
+.how-it-work h2{
+    font-size: 2rem;
+    margin-bottom: 40px;
+    text-align: center;
+}
+/*grid*/
+.bento-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 250px;
+    gap: 20px;
+}
+/*cards*/
+.card{
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: left;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0, 0,0, 0.05);
+    transition: transform 0.3s ease;
+}
+.card:hover{
+    transform: translateY(-5px);
+}
+.card  .step{
+    font-size: 0.9rem;
+    color: gray;
+}
+.card h3{
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+.card p{
+    font-size: 0.95rem;
+    color: #555;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+
+}
+/*taille bento*/
+.card-large{
+    grid-column: span 1;
+    grid-row: span 2;
+
+ }
+ .card-wide{
+    grid-column: span 2;
+ }
+ /*responsive*/
+ @media(max-width:768px){
+    .bento-grid{
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+    }
+    .card-large,
+    .card-wide{
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+ }
+ /*=====categories=======*/
+ /* Style des cartes de catégories */
+.category-card {
+    background: #ffffff;
+    border: 1px solid #eef2f6;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s ease;
+}
+
+/* Effet de survol stylé */
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(79, 70, 229, 0.08);
+    border-color: #4f46e5;
+}
+
+/* Bulle de l'icône */
+.icon-box {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(79, 70, 229, 0.08); /* Fond indigo très clair */
+    color: #4f46e5; /* Couleur de l'icône */
+    font-size: 1.6rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+/* Animation de l'icône au survol de la carte */
+.category-card:hover .icon-box {
+    background-color: #4f46e5;
+    color: #ffffff;
+}
+ /*=====temoignage====*/
+ /* Style pour forcer les images à être des ronds parfaits */
+.testimonial-img {
+    width: 400px;          /* Ajustez la taille selon vos besoins */
+    height: 400px;         /* Doit être identique à la largeur */
+    object-fit: cover;     /* Évite que l'image soit déformée */
+    border-radius: 50%;    /* C'est cette ligne qui crée le rond */
+    border: 3px solid #0d6efd; /* Optionnel : un petit contour bleu Bootstrap */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optionnel : une légère ombre */
+}
+
+/* Centre le contenu verticalement si besoin */
+.testimonial-card {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/*cta*/
+.cta{
+    position: relative;
+    background: url();
+    height: 350px;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+color:white;
+overflow: hidden;
+}
+/*overlay sombre*/
+.cta .overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0,0, 0.6);
+    top: 0;
+    left: 0;
+}
+/*contenu*/
+.cta-content{
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+}
+.cta-content p{
+    margin-bottom: 25px;
+    color: #ddd;
+}
+.cta-content h2{
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+/*bouton*/
+.cta-btn{
+    background: rgba(5, 74, 225, 0.785);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.cta-btn:hover{
+    background: #9333ea;
+    transform: scale(1.03);
+}/*===footer===*/
+.footer a{
+    color: #ccc;
+    text-decoration: none;
+    transition: 0.3s;
+    margin-top: 50%;
+}
+.footer a:hover{
+    color: #fff;
+    padding-left: 5px;
+    margin-top: 20%;
+    text-align: center;
+}
+.logo{
+    color: blue;
+    text-align: center;
+    margin-top: 20%;
+}
+.social-icons a{
+    color: #ccc;
+    margin-right: 10px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+.social-icon a:hover{
+    color: rgba(6, 6, 235, 0.668);
+    transform: scale(1.2);
+}
+/*===contact===*/
+.contact{
+    font-family: 'Segoe UI',Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(to right,#2952a5);
+}
+/*titre*/
+.titrecontact{
+    text-align: center;
+    margin: 40px 0 20px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 28px;
+    
+}
+/*container table*/
+table{
+    width: 85%;
+    margin: auto;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 12px ;
+    overflow: hidden;
+}
+/*colonne*/
+td{
+    vertical-align: top;
+    padding: 30px;
+}
+/*========formulaire=========*/
+form input,
+form select,
+form textarea{
+    width: 100%;
+    padding:12px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+td{
+    background: linear-gradient(135deg,#01337c95,#045191);
+}
+ input,
+ select,
+ textarea{
+      transition: all 0.3s ease;
+ }
+  input:focus,
+  select:focus,
+textarea:focus{
+    border-color: #e76868;
+    box-shadow: 0 0 8px rgba(195, 170, 170, 0.918);
+    background-color: #e06066;
+    transform: scale(1.02);
+    outline: none;
+}
+/*bouton*/
+button{
+    padding: 12px;
+    border: none;
+    width: 100%;
+    background:linear-gradient(135deg,#4dabf7);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+button:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(13,110,253,0.3);
+}
+/*infos contact*/
+ td:nth-child(2) h3 {
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+td:nth-child(2) p{
+    margin: 10px 0;
+    font-size: 15px;
+    /* Le conteneur qui aligne vos 4 colonnes */
+.footer-container {
+  display: flex;
+  flex-wrap: wrap; /* Permet de passer à la ligne sur petit écran */
+  justify-content: space-between; /* Espace équitablement les colonnes */
+  gap: 20px; /* Ajoute un espace de sécurité entre les blocs */
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+}
+/*====partie droite====*/
+td:nth-child(2){
+    background:linear-gradient(135deg,#01337c95,#045191);
+    color:white;
+}
+/*carte*/
+iframe{
+    margin-top: 10px;
+    border-radius: 8px;
+    width: 100%;
+    height: 220px;
+    border: none;
+}
+
+
+/*=====freelance===*/
+.freelance{
+    background:rgb(67, 141, 194)
+}
+.freelance-card{
+    overflow:hidden  !important;
+}
+.freelance-card .card-img-top{
+    width: 100% !important;
+    height: 250px !important;
+    object-fit: cover !important;
+    object-position: 50% 15% !important;
+}
+/*======apropos======*/
+/* Le conteneur qui aligne vos 4 colonnes */
+.footer-container {
+  display: flex;
+  flex-wrap: wrap; /* Permet de passer à la ligne sur petit écran */
+  justify-content: space-between; /* Espace équitablement les colonnes */
+  gap: 20px; /* Ajoute un espace de sécurité entre les blocs */
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Chaque colonne individuelle */
+.footer-column {
+  flex: 1; /* Les colonnes se partagent l'espace disponible */
+  min-width: 200px; /* TRÈS IMPORTANT : empêche la colonne de devenir trop étroite */
+}
+
+/* Pour éviter que les mots longs comme "Ressources" se coupent mal */
+.footer-column h3 {
+  white-space: nowrap; 
+}
+
+/* Le copyright qui reste sagement tout en bas */
+.copyright {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid #333; /* Optionnel : une petite ligne de séparation */
+}
+
+.apropos{
+    background:linear-gradient(rgb(41, 156, 195)) ; 
+}   
+/*=====tarifs====*/
+/* Assure que toutes les cartes ont la même hauteur */
+.price-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Pousse le bouton vers le bas de la carte */
+.price-card .card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.price-card .btn {
+    margin-top: auto !important; /* Le bouton colle au bas de la carte */
+}
+
+/* Espacement pour les icônes */
+.list-unstyled li {
+    margin-bottom: 10px;
+}
+
+.list-unstyled li i {
+    margin-right: 8px;
+}
+/*faq*/
+.accordion-button{
+    font-weight: 500;
+}
+/*about*/
+.card-img-top {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    margin: 0 auto;
+}
+/*global*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 80px;
+}
+/*titre*/
+.container{
+    max-width: 1100px;
+}
+.section-title{
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: bold;
+    font-size: 32px;
+    color: #0d6efd;
+}
+.story{
+    background: #f8f9fa;
+    padding: 60px 20px;
+    border-radius:12px ;
+}
+.story-text{
+    font-family: 17px;
+    line-height: 1.8;
+    color: #444;
+    font-size: 18px;
+}
+/*contact*/
+/* Style du bloc de droite */
+.contact-info-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    height: 100%; /* Aligne la hauteur avec le formulaire */
+}
+
+/* Style de l'iframe de la carte */
+.map-container {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden; /* Important pour arrondir les coins de la carte */
+    margin-top: 15px;
+}
+
+/* Ajustement pour que le formulaire soit bien espacé */
+form .form-control {
+    border-radius: 5px;
 }
