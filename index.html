@@ -63,95 +63,124 @@
     </div>
   </nav>
 
-  <!-- SECTION HERO EN BACKGROUND IMMERSIF -->
-<section class="hero-banner d-flex align-items-center position-relative text-white">
-    <!-- Overlay sombre pour rendre le texte parfaitement lisible -->
-    <div class="hero-overlay"></div>
+  <!--hero-->
+  <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfriTalent</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <div class="container position-relative z-index-2 py-5">
-        <div class="row">
-            <div class="col-lg-8">
-                <!-- Surtitre -->
-                <h6 class="text-uppercase fw-bold tracking-wider text-cyan mb-3">
-                    La plateforme qui réunit talents & opportunités
-                </h6>
-                
-                <!-- Titres Principaux -->
-                <h1 class="display-3 fw-bold mb-3 header-title">
-                    Trouvez le freelance idéal.<br>
-                    <span class="text-cyan">Réalisez vos projets.</span>
-                </h1>
-                
-                <!-- Description -->
-                <p class="lead mb-4 text-light opacity-90 max-width-sm">
-                    AfriTalent connecte les entreprises avec des freelances qualifiés.
-                </p>
-
-                <!-- Boutons d'action -->
-                <div class="d-flex gap-3 mb-5 flex-wrap">
-                    <a href="#" class="btn btn-primary btn-lg rounded-pill px-4 fw-bold shadow">Je suis freelance</a>
-                    <a href="#" class="btn btn-outline-light btn-lg rounded-pill px-4 fw-bold">Je cherche un freelance</a>
-                </div>
-
-                <!-- BLOC DES STATISTIQUES INTÉGRÉES -->
-                <div class="row g-4 stats-grid pt-4 border-top border-light border-opacity-20">
-                    <div class="col-4 col-sm-3">
-                        <h3 class="fw-bold mb-0 text-cyan display-6">+500</h3>
-                        <p class="small text-light opacity-75 mb-0">Freelances</p>
-                    </div>
-                    <div class="col-4 col-sm-3">
-                        <h3 class="fw-bold mb-0 text-cyan display-6">+800</h3>
-                        <p class="small text-light opacity-75 mb-0">Entreprises</p>
-                    </div>
-                    <div class="col-4 col-sm-4">
-                        <h3 class="fw-bold mb-0 text-cyan display-6">+12 000</h3>
-                        <p class="small text-light opacity-75 mb-0">Missions</p>
-                    </div>
-                </div>
-
+    <header class="hero-section">
+        <div class="container">
+            
+            <h1>Trouvez le freelance <br><span>idéal.</span></h1>
+            <p class="subtitle">Réalisez vos projets.</p>
+            <p class="description">AfriTalent connecte les entreprises avec des freelances qualifiés.</p>
+            
+            <div class="cta-buttons">
+                <a href="freelances.html" class="btn btn-primary">Je suis freelance</a>
+                <a href="freelances.html" class="btn btn-secondary">Je cherche un freelance</a>
             </div>
-        </div>
-    </div>
-</section>
+            
+            <hr class="separator">
 
+            <div class="stats-container">
+                <div class="stat-item">
+                    <h3>+500</h3>
+                    <p>Freelances</p>
+                </div>
+                <div class="stat-item">
+                    <h3>+800</h3>
+                    <p>Entreprises</p>
+                </div>
+                <div class="stat-item">
+                    <h3>+12 000</h3>
+                    <p>Missions</p>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+</body>
+</html>
+            
+            
   <!-- COMMENT -->
 
-  <section>
-
-    <div class="container text-center">
-
-      <div class="section-title">
-        <h2>COMMENT ÇA MARCHE</h2>
-        <p>Une collaboration en 3 étapes</p>
-      </div>
-
-      <div class="bento-grid">
-        <div class="card card">
-          <span class="step-number">01</span>
-          <div class="icon-box"></div>
-            <i class="bi bi-file-earmark-text"></i>
-          <h4>Publiez votre projet</h4>
-        </div>
-
-        <div class="bento-card">
-          <div class="card card-large">
-          <span class="step-number">02</span>
-          <div class="icon-box"></div>
-            <i class="bi bi-people"></i>
-          <h4>Recevez des candidatures</h4>
-        </div>
-
-        <div class="bento-card">
-          <div class="card card-large">
-          <span class="step-number">03</span>
-          <div class="icon-box"></div>
-            <i class="bi bi-chat-dots"></i>
-          <h4>Collaborez facilement</h4>
-        </div>
-        
-        
-      </div>
+  <div class="container my-5">
+    <div class="text-center mb-5">
+        <h3 class="text-uppercase fw-bold" style="color: #1e3a8a;">COMMENT ÇA MARCHE</h3>
+        <!-- Changement ici : on passe à 4 étapes -->
+        <h2 class="fw-bold" style="color: #2563eb;">Une collaboration en 4 étapes</h2>
     </div>
+
+    <!-- Grille Bootstrap automatique pour 4 éléments -->
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+        
+        <!-- Étape 1 -->
+        <div class="col">
+            <div class="card h-100 border-0 shadow-sm p-3" style="border-radius: 10px;">
+                <div class="card-body">
+                    <div class="text-muted small mb-2">01</div>
+                    <div class="mb-3" style="width: 40px; height: 40px; background-color: #e0e7ff; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                        <!-- Icône Document (Publiez votre projet) -->
+                        <i class="bi bi-file-earmark-text text-primary"></i>
+                    </div>
+                    <h5 class="card-title fw-semibold">Publiez votre projet</h5>
+                </div>
+            </div>
+        </div>
+
+        <!-- Étape 2 -->
+        <div class="col">
+            <div class="card h-100 border-0 shadow-sm p-3" style="border-radius: 10px;">
+                <div class="card-body">
+                    <div class="text-muted small mb-2">02</div>
+                    <div class="mb-3" style="width: 40px; height: 40px; background-color: #e0e7ff; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                        <!-- Icône Candidats/Utilisateurs -->
+                        <i class="bi bi-people text-primary"></i>
+                    </div>
+                    <h5 class="card-title fw-semibold">Recevez des candidatures</h5>
+                </div>
+            </div>
+        </div>
+
+        <!-- Étape 3 -->
+        <div class="col">
+            <div class="card h-100 border-0 shadow-sm p-3" style="border-radius: 10px;">
+                <div class="card-body">
+                    <div class="text-muted small mb-2">03</div>
+                    <div class="mb-3" style="width: 40px; height: 40px; background-color: #e0e7ff; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                        <!-- Icône Chat/Discussion -->
+                        <i class="bi bi-chat-dots text-primary"></i>
+                    </div>
+                    <h5 class="card-title fw-semibold">Collaborez facilement</h5>
+                </div>
+            </div>
+        </div>
+
+        <!-- Étape 4 -->
+        <div class="col">
+            <div class="card h-100 border-0 shadow-sm p-3" style="border-radius: 10px;">
+                <div class="card-body">
+                    <div class="text-muted small mb-2">04</div>
+                    <div class="mb-3" style="width: 40px; height: 40px; background-color: #e0e7ff; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                        <!-- Icône Validation/Paiement sécurisé -->
+                        <i class="bi bi-shield-check text-primary"></i>
+                    </div>
+                    <!-- Tu peux modifier ce titre de l'étape 4 si tu le souhaites -->
+                    <h5 class="card-title fw-semibold">Finalisez en sécurité</h5>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
   </section>
 
   <!-- SERVICES -->
@@ -276,26 +305,22 @@
 
   <!-- CTA -->
 
-  <section>
+  
 
-    <div class="container">
+  <section id="cta fade-in" class="cta-section text-center  bg-btn-primary texte-white py-5 position-relative">
+    <div class="cta-overlay"></div>
 
-      <div class="cta d-flex justify-content-between align-items-center flex-wrap gap-4">
-
-        <div>
-          <h2>Prêt à démarrer votre projet ?</h2>
-          <p>Rejoignez des milliers de freelances.</p>
-        </div>
-
-        <a href="#" class="cta-btn">
-          S'inscrire gratuitement
-        </a>
-
-      </div>
-
-    </div>
-
+    <div class="container position-relative z-index-2 py-4">
+    <h2 class="fw-bold mb-3">Pret a propulser vos projets tech ?</h2>
+    <p class="fs-5 mb-4 max-w-600 mx-auto" style="max-width: 600px;">
+      Rejoignez des milliers d'entreprises qui font confiance aux meilleurs talents du continent .
+    </p>
+    <a href="contact.html" class="btn btn-primary btn-lg px-5 py-3 fw-bold btn-cta">
+      S'inscrire maintenant
+    </a>
+  </div>
   </section>
+
 
   <!-- FOOTER -->
 
@@ -353,7 +378,7 @@
             <h4>Contact</h4>
 
             <strong>Mail : contact@afritalent.com</strong>
-            <strong>Tel : +221 77 206 30 92</strong>
+            <strong>Tel : +221 77 206 40 92</strong>
             <strong>Addresse : Dakar , Senegal </strong>
 
           </div>
