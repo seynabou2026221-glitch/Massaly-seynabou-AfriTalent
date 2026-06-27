@@ -691,3 +691,69 @@ body.dark-mode {
     background: none;
     border: none;
 }
+/* --- Styles pour le Fade-in des sections --- */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(30px); /* Légère impulsion vers le haut */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform;
+}
+
+/* Classe ajoutée par JavaScript lorsque la section est visible */
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* État initial caché (invisible et légèrement décalé vers le bas) */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* État visible déclenché par le JavaScript */
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Styles de base pour la démonstration */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 20px;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.stat-card {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 25%;
+}
+
+.counter {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* --- ANIMATION FADE-IN (ENTRÉE EN FONDU) --- */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(30px); /* Légère impulsion vers le haut */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Classe ajoutée par JavaScript lorsque l'élément est visible */
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
