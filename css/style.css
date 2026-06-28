@@ -757,3 +757,63 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
+.filter-container {
+    display: flex;
+    justify-content: center;  /* Centre les boutons horizontalement */
+    flex-wrap: wrap;         /* Permet de passer à la ligne proprement sur mobile */
+    gap: 10px;               /* Aligne et espace les boutons de 10px */
+}
+
+.filter-btn {
+    display: inline-block;
+    width: auto !important;  /* Force le bouton à ne prendre que la taille de son texte */
+    padding: 8px 20px;
+    border: 1px solid #3182ce;
+    background-color: #3182ce;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: #2b6cb0;
+    border-color: #2b6cb0;
+}
+/* Style des boutons/labels */
+.filter-btn {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #f0f0f0;
+    color: #333;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin: 5px;
+}
+
+/* Changement de couleur quand on clique (sélectionné) */
+#all:checked ~ .filter-btn[for="all"],
+#dev:checked ~ .filter-btn[for="dev"],
+#gestion:checked ~ .filter-btn[for="gestion"],
+#marketing:checked ~ .filter-btn[for="marketing"],
+#immobilier:checked ~ .filter-btn[for="immobilier"] {
+    background-color: #3182ce;
+    color: white;
+}
+
+/* LA MAGIE DU FILTRAGE CSS */
+/* On cache tout par défaut si un filtre spécifique est coché */
+#dev:checked ~ .row .freelance-card:not(.dev),
+#gestion:checked ~ .row .freelance-card:not(.gestion),
+#marketing:checked ~ .row .freelance-card:not(.marketing),
+#immobilier:checked ~ .row .freelance-card:not(.immobilier) {
+    display: none !important;
+}
+.filter-btn.active {
+    background-color: #007bff; /* Ton bleu actuel */
+    color: white;
+}
+.freelance-card {
+    transition: all 0.3s ease-in-out;
+}
