@@ -220,7 +220,67 @@ body.dark .navbar-light .navbar-toggler-icon {
 }
 
 
+/* ==========================================================================
+   1. CODE POUR GRAND ÉCRAN (ORDINATEUR)
+   Ton code actuel est écrit ici par défaut. 
+   ========================================================================== */
 
+
+
+/* ==========================================================================
+   2. CODE POUR TABLETTE (Écrans inférieurs à 1024px)
+   Tout ce qui est écrit ici s'appliquera UNIQUEMENT sur tablette et mobile.
+   ========================================================================== */
+@media (max-width: 1024px) {
+    
+    /* Exemple : On réduit un peu la taille des gros titres */
+    h1 {
+        font-size: 2rem;
+    }
+    
+    /* Si tu as une grille ou un flex, on s'assure qu'il gère l'espace */
+    .container, .main-content {
+        padding: 0 20px;
+    }
+}
+
+/* ==========================================================================
+   3. CODE POUR MOBILE (Écrans inférieurs à 768px)
+   C'est ici qu'on corrige la majorité des bugs visuels du Commit 9.
+   ========================================================================== */
+@media (max-width: 768px) {
+    
+    /* RÈGLE D'OR MOBILE : Forcer les éléments côte à côte à s'empiler */
+    .row, .grid, .flex-container, header, footer {
+        flex-direction: column !important;
+        display: block !important; /* Si flex n'est pas utilisé */
+        width: 100% !important;
+    }
+
+    /* Empêcher les éléments de déborder de l'écran (supprime le scroll horizontal) */
+    body, html {
+        overflow-x: hidden;
+    }
+
+    /* Ajustement des images pour qu'elles ne dépassent jamais de leur zone */
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    /* Forcer les sections, menus ou blocs à prendre toute la largeur */
+    .section, .sidebar, .card, .box {
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-bottom: 20px; /* Ajoute de l'espace vertical entre les blocs empilés */
+    }
+
+    /* Centrer le texte sur mobile pour que ce soit plus propre */
+    .text-center-mobile {
+        text-align: center;
+    }
+}
 /* Ajustement responsive pour les mobiles */
 
 @media (max-width: 768px) {

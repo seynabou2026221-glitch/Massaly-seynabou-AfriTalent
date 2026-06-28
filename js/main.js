@@ -203,227 +203,70 @@ document.addEventListener("DOMContentLoaded", () => {
         pageObserver.observe(section);
     });
 });
-// ================================
-// FILTRAGE DYNAMIQUE DES FREELANCES
-// ================================
+document.addEventListener('DOMContentLoaded', function() {
 
-document.addEventListener("DOMContentLoaded", function () {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const freelanceCards = document.querySelectorAll('[data-category]');
 
-    const boutons = document.querySelectorAll(".filter-btn");
-    const cartes = document.querySelectorAll(".freelance-card");
+    console.log('Boutons trouvés:', filterBtns.length);
+    console.log('Cards trouvées:', freelanceCards.length);
 
+    filterBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
 
-    boutons.forEach(bouton => {
-
-        bouton.addEventListener("click", function () {
-
-
-            // changement de bouton actif
-            boutons.forEach(btn => {
-                btn.classList.remove("active");
+            filterBtns.forEach(function(b) {
+                b.classList.remove('active');
             });
-
-            this.classList.add("active");
-
-
-            let categorie = this.dataset.filter;
-
-
-            cartes.forEach(carte => {
-
-                let categorieCarte = carte.dataset.category;
-
-
-                if(categorie === "all" || categorieCarte === categorie){
-
-                    carte.style.display = "block";
-
-                    setTimeout(()=>{
-                        carte.style.opacity = "1";
-                    },50);
-
-                }else{
-
-                    carte.style.opacity = "0";
-
-                    setTimeout(()=>{
-                        carte.style.display = "none";
-                    },300);
-
-                }
-
-            });
-
-        });
-
-    });
-
-});
-
-
-
-
-// ================================
-// VALIDATION FORMULAIRE CONTACT
-// ================================
-
-
-const formulaire = document.querySelector("#contactForm");
-
-
-if(formulaire){
-
-
-formulaire.addEventListener("submit", function(e){
-
-
-    e.preventDefault();
-
-
-    let nom = document.querySelector("#nom");
-    let email = document.querySelector("#email");
-    let sujet = document.querySelector("#sujet");
-    let message = document.querySelector("#message");
-
-
-    let valide = true;
-
-
-
-    // récupération des erreurs
-
-    let erreurNom = document.querySelector("#nomError");
-    let erreurEmail = document.querySelector("#emailError");
-    let erreurSujet = document.querySelector("#sujetError");
-    let erreurMessage = document.querySelector("#messageError");
-
-
-
-    // vider les erreurs
-
-    erreurNom.textContent="";
-    erreurEmail.textContent="";
-    erreurSujet.textContent="";
-    erreurMessage.textContent="";
-
-
-
-    // Nom
-
-    if(nom.value.trim()===""){
-
-        erreurNom.textContent="Le nom est obligatoire";
-        valide=false;
-
-    }
-
-
-
-    // Email
-
-    let regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-
-    if(email.value.trim()===""){
-
-        erreurEmail.textContent="L'email est obligatoire";
-        valide=false;
-
-    }
-
-    else if(!regexEmail.test(email.value)){
-
-        erreurEmail.textContent="Format email invalide";
-        valide=false;
-
-    }
-
-
-
-    // Sujet
-
-    if(sujet.value.trim()===""){
-
-        erreurSujet.textContent="Le sujet est obligatoire";
-        valide=false;
-
-    }
-
-
-
-    // Message
-
-    if(message.value.trim()===""){
-
-        erreurMessage.textContent="Le message est obligatoire";
-        valide=false;
-
-    }
-
-    else if(message.value.length < 20){
-
-        erreurMessage.textContent=
-        "Le message doit contenir au minimum 20 caractères";
-
-        valide=false;
-
-    }
-
-
-
-
-    // succès
-
-    if(valide){
-
-
-        let succes = document.querySelector("#successMessage");
-
-
-        succes.textContent =
-        "Votre message a été envoyé avec succès !";
-
-
-        succes.style.display="block";
-
-
-        formulaire.reset();
-
-
-        setTimeout(()=>{
-
-            succes.style.display="none";
-
-        },4000);
-
-
-    }
-
-
-
-});
-
-
-}
-document.addEventListener("DOMContentLoaded", () => {
-    // Sélection de tous les boutons radio de filtrage
-    const filtres = document.querySelectorAll('input[name="filtre"]');
-    // Sélection de toutes les cartes de freelances
-    const cartes = document.querySelectorAll('.freelance-card');
-
-    filtres.forEach(filtre => {
-        filtre.addEventListener('change', () => {
-            const categorieSelectionnee = filtre.id;
-
-            cartes.forEach(carte => {
-                // Récupération de la catégorie de la carte actuelle
-                const categorieCarte = carte.getAttribute('data-category');
-
-                // Si "Tous" est coché ou si la catégorie de la carte correspond au filtre
-                if (categorieSelectionnee === 'all' || categorieCarte === categorieSelectionnee) {
-                    carte.style.display = 'block'; // Affiche la carte
+            this.classList.add('active');
+
+            const filter = this.getAttribute('data-filter');
+            console.log('Filtre cliqué:', filter);
+
+            freelanceCards.forEach(function(card) {
+                const category = card.getAttribute('data-category');
+                if (filter === 'all' || category === filter) {
+                    card.style.display = 'block';
                 } else {
-                    carte.style.display = 'none';  // Masque la carte
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+});
+document.addEventListener("DOMContentLoaded", () => {
+    const buttons = document.querySelectorAll(".filter-btn");
+    const cards = document.querySelectorAll(".freelance-card");
+
+    buttons.forEach(button => {
+        button.addEventListener("click", () => {
+            // 1. Gérer la classe active sur les boutons
+            buttons.forEach(btn => btn.classList.remove("active"));
+            button.classList.add("active");
+
+            // 2. Récupérer la catégorie du bouton cliqué
+            const filterValue = button.getAttribute("data-filter");
+
+            // 3. Filtrer les cartes avec animation
+            cards.forEach(card => {
+                const cardCategory = card.getAttribute("data-category");
+
+                if (filterValue === "all" || filterValue === cardCategory) {
+                    // On affiche la carte
+                    card.style.display = "block";
+                    // Petit timeout pour laisser le temps au display de s'appliquer avant l'animation
+                    setTimeout(() => {
+                        card.style.opacity = "1";
+                        card.style.transform = "scale(1)";
+                    }, 10);
+                } else {
+                    // On cache la carte avec effet de disparition
+                    card.style.opacity = "0";
+                    card.style.transform = "scale(0.8)";
+                    
+                    // On attend la fin de la transition CSS (0.3s) pour mettre le display: none
+                    setTimeout(() => {
+                        card.style.display = "none";
+                    }, 300); 
                 }
             });
         });
