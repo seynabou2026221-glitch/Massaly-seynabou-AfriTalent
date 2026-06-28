@@ -1,0 +1,77 @@
+Structure détaillée de votre PowerPoint (14 Diapos)
+Diapositive 1 : Page de titre
+ Titre principal : Projet AfriTalent – Plateforme de mise en relation de freelances
+ Sous-titre : Soutenance de fin de projet de Front-End Web Development
+ Présenté par : Seynabou Massaly
+ Date : Juin 2026
+Diapositive 2 : Sommaire
+ 1. Présentation du projet (Contexte & Objectifs)
+ 2. Choix de design & Identité visuelle
+ 3. Architecture & Structure du site
+ 4. Points techniques (Bootstrap, CSS & JavaScript)
+ 5. Workflow Git & Déploiement GitHub Pages
+ 6. Difficultés rencontrées & Conclusion
+Diapositive 3 : Présentation du projet
+ Contexte : Difficulté pour les jeunes talents africains de se faire repérer et pour les entreprises de trouver des profils qualifiés locaux.
+ Objectif : Bâtir une plateforme moderne, rapide et accessible pour connecter les entreprises et les freelances.
+ Public cible : Startups, entreprises à la recherche d'experts, et professionnels indépendants (Commerçants, Hommes d'affaires, Transitaires, Comptables).
+Diapositive 4 : Choix de design (Partie 1)
+ Palette de couleurs (Codes HEX) :
+ ⁠#3b82f6⁠ (Bleu primaire Bootstrap) : Symbolise la confiance professionnelle, la technologie et la sécurité.
+ ⁠#212529⁠ (Sombre / Dark) : Utilisé pour un footer élégant et le mode nuit.
+ ⁠#bg-light / #ffffff⁠ : Pour garantir un contraste propre et une lisibilité maximale.
+ Polices d'écriture :
+ Poppins (Google Fonts) : Une typographie géométrique sans-serif moderne, épurée et hautement lisible sur les écrans mobiles et ordinateurs.
+Diapositive 5 : Choix de design (Partie 2)
+ Inspirations & Ergonomie :
+ Interface inspirée des grandes plateformes de freelancing (Malt, Upwork) réadaptée aux réalités visuelles locales.
+ Composants graphiques : Cartes de tarifs claires avec badges de mise en avant ("Populaire") et icônes explicites (⁠bi-check-circle⁠, ⁠bi-x-circle⁠) pour guider l'utilisateur.
+Diapositive 6 : Architecture du site (Arborescence)
+ Structure des fichiers du projet :
+ AfriTalent/
+├── index.html        (Accueil)
+├── freelances.html   (Liste des talents)
+├── tarifs.html       (Grille de prix & FAQ)
+├── about.html        (Histoire de Seynabou, Équipe & Chiffres)
+├── contact.html      (Formulaire & Google Maps)
+├── css/
+│   └── style.css     (Styles personnalisés)
+└── js/
+    └── main.js        (Logique Dark Mode & Compteurs)
+    Diapositive 8 : Points techniques – Bootstrap & CSS
+ Framework de mise en page : Utilisation intensive de Bootstrap 5.3.3 pour un rendu 100% responsive (⁠col-lg-3 col-md-4 col-12⁠).
+ Composants Bootstrap clés :
+ Navbar fixe : ⁠fixed-top⁠ avec ombrage léger pour une navigation fluide.
+ Accordéon FAQ : ⁠accordion⁠ dynamique natif de Bootstrap pour ouvrir/fermer les questions sans surcharger la page.
+ Grilles de cartes : ⁠card shadow⁠ pour l'affichage de l'équipe et des tarifs.
+Diapositive 9 : Points techniques – JavaScript (JS)
+ Fonctionnalités dynamiques programmées dans ⁠js/main.js⁠ :
+ Gestionnaire de thème (Dark Mode) : Écouteur d'événement sur le bouton ⁠#theme-toggle⁠ pour basculer le design du site d'un clic.
+ Animation des chiffres clés : Script d'incrémentation automatique des compteurs de la section statistique (ex: Objectif de progression dynamique vers 201+ projets et 1200+ lignes de code).
+Diapositive 10 : GitHub & Workflow de déploiement
+ Suivi de version : Utilisation rigoureuse de Git tout au long du développement (découpé en 10 étapes/commits clés).
+ Déploiement en ligne : Activation de GitHub Pages pour rendre le projet accessible publiquement via une URL en direct.
+ Commande de finalisation (Commit 10) :
+⁠git commit -m "Déploiement : GitHub Pages activé, README finalisé et présentation PowerPoint ajoutée"⁠
+Diapositive 11 : Difficultés rencontrées & Solutions
+ Difficulté 1 : Gestion de la responsivité de la grille de l'équipe.
+ Solution : Utilisation des classes responsives combinées de Bootstrap (⁠col-12 col-md-4 col-lg-3⁠) pour empiler verticalement sur mobile et aligner proprement sur grand écran.
+ Difficulté 2 : Intégration interactive des composants sans conflit.
+ Solution : Structuration propre du script ⁠main.js⁠ et liaison correcte du bundle JavaScript de Bootstrap en fin de document pour assurer le bon fonctionnement du menu mobile et des accordéons de la FAQ.
+Diapositive 12 : Ressources & Documentation utilisées
+ Documentation officielle de Bootstrap 5.3 (pour les composants d'accordéon et le système de grille).
+ Google Fonts (intégration de la police Poppins).
+ Bootstrap Icons (bibliothèque d'icônes vectorielles).
+ Google Maps Embed API (pour l'affichage de la carte interactive à Dakar sur la page contact).
+Diapositive 13 : Démonstration en direct (Live Demo)
+ Lien du site en ligne : (Insérez ici votre lien GitHub Pages final)
+ Parcours de la démonstration :
+1. Navigation sur l'Accueil et la liste des Freelances.
+2. Consultation des grilles de Tarifs et test d'ouverture/fermeture des questions de la FAQ.
+3. Passage sur la page À propos (découverte des valeurs et de l'équipe).
+4. Test de simulation d'envoi du formulaire sur la page Contact.
+Diapositive 14 : Conclusion & Perspectives
+ Bilan : Objectifs atteints. Un site vitrine fluide, responsive, respectant les bonnes pratiques d'architecture web (séparation HTML/CSS/JS) et versionné professionnellement.
+ Perspectives d'amélioration future :
+ Connexion à une base de données (Back-End) pour permettre aux vrais utilisateurs de s'inscrire et de déposer des annonces.
+ Ajout d'un système de paiement en ligne direct (Wave, Orange Money) pour l'achat des plans Pro et Entreprise.
